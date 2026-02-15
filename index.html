@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>📚 Library Management System</h1>
+  <p>CRUD-based Book Management</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Add / Update Book</h2>
+    <form id="bookForm">
+      <input type="hidden" id="index">
+      <input type="text" id="bookId" placeholder="Book ID" required>
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="text" id="category" placeholder="Category" required>
+      <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+      <button type="submit">Save Book</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Book Collection</h2>
+    <input type="text" id="search" placeholder="Search by title or author">
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Category</th>
+          <th>Qty</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="bookTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Library CRUD Application
+</footer>
+
+<script src="js/library.js"></script>
+</body>
+</html>
